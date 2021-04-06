@@ -1,4 +1,4 @@
-# PCBS_Emotional_Memory
+# Emotional Memory Project
 
 This is a project aiming ot replicate the analysis and graphs shown in Girardeau et al. 2017 (https://www.nature.com/articles/nn.4637.pdf?origin=ppub). Due to limited computational power and memory the analysis will only be done on one session of one rat. Moreover analysis will be limited to neural data (not behavioral).  All the analysis and illustrations will be performed in Python. The main Python modules to be used are numpy, pandas, matplotlib, and neuroseries (https://github.com/NeuroNetMem/neuroseries). I am familiar with all but the last module.  
 
