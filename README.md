@@ -8,4 +8,4 @@ This is a project aiming ot replicate the analysis and graphs shown in Girardeau
 3. Replicate Figure 2C: plot the firing rates of the first type of cells against the second. 
 4. Replicate Figure 4: find which cells are modulated bu sharp-wave ripples. Plot the relevant figures. 
 
-The most important question is weather any of the findings can be replicated with only a fraction of raw data.
+The most important question is wether any of the findings can be replicated with only a fraction of raw data.
