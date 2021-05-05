@@ -7,8 +7,10 @@ This is a project aiming ot replicate the analysis and graphs shown in Girardeau
 **There are 4 main steps to complete:**
 1. Acquire the data which are publicly available (https://crcns.org/data-sets/hc). I expect data regarding neural activity of cells recorded, sleep scoring, as well as some information about the location of the recording and the type of the cell (pyramidal, interneuron, etc.). 
 2. Set up the loading of the data into the workspace and turn them into data that can be read by python. 
-3. Replicate Figure 2C: plot the firing rates of the first type of cells against the second. 
-4. Replicate Figure 4: find which cells are modulated bu sharp-wave ripples. Plot the relevant figures. 
+3. Replicate Figure 2C: plot the firing rates of the first type of cells against the second. To do so I need to 
+      - compute the firing rates for each cell for each of the periods: REM and NREM
+      - compute firing rate distribution for each type of cell
+5. Replicate Figure 4: find which cells are modulated bu sharp-wave ripples. Plot the relevant figures. 
 
 The most important question is whether any of the findings can be replicated with only a fraction of raw data.
 
