@@ -9,11 +9,14 @@ This is a project aiming ot replicate the analysis and graphs shown in Girardeau
 2. Set up the loading of the data into the workspace and turn them into data that can be read by python. 
 3. Replicate Figure 2C: plot the firing rates of the first type of cells against the second. To do so I need to 
       - compute the firing rates for each cell for each of the periods: REM and NREM
-      - compute firing rate distribution for each type of cell
+      - compute firing rate distribution for each type of cell during each state.
 
-
-The most important question is whether any of the findings can be replicated with only a fraction of raw data.
 
 
 ## Data
 The data were acquired from: https://crcns.org/data-sets/hc
+
+
+## To do
+- An obvious limitation of this project is the inability to allow the user to run the script eithout needing to download the data even though they are publicly available.
+- 
