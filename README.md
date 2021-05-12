@@ -28,28 +28,19 @@ The file as it is right now is not particularly useful for other users, but prov
 
 ### Notation:
 **Brain states:**
-
-REM sleep:'Rem'
-
-NREM sleep: 'sws' (standing for slow wave sleep)
-
-Wake periods: 'Wake'
-
-Periods of drowsiness (falling asleep): 'drowsy'
+- REM sleep:'Rem'
+- NREM sleep: 'sws' (standing for slow wave sleep)
+- Wake periods: 'Wake'
+- Periods of drowsiness (falling asleep): 'drowsy'
 
 **Brain types:**
-
-Pyramidal cells: 'Pyr'
-
-Interneurons:'Int'
-
-Unknown cells: 'Unk'
+- Pyramidal cells: 'Pyr'
+- Interneurons: 'Int'
+- Unknown cells: 'Unk'
 
 **Brain regions:**
-
-Basolateral Ammygdala: 'BLA'
-
-Dorsal Hippocampus: 'Hpc'
+- Basolateral Ammygdala: 'BLA'
+- Dorsal Hippocampus: 'Hpc'
 
 ## What the analysis does
 1. It loads spike data and metadata (using the bk.load module).
@@ -58,8 +49,9 @@ Dorsal Hippocampus: 'Hpc'
 4. Plots a scatter plot showing how the firing rates of cells during a period relate to the firing rates of another period.
 5. Plots a histogram showing the distribution of firing rates for different types of cells during the selected brain states.
 
- 
 ## How to run the analysis
+To run the analysis run the file '' found here:
+To see all the functions used select the file '' shown below:
 
 ## Results obtained
 
