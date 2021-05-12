@@ -34,7 +34,8 @@ All the data were saved locally. Each session corresponded to a different local 
 
 The goal of this analysis was to result in the graphs shown below and allow the user to do any comparison of interest between brain states.
 
-![alt text](https://github.com/PLoizidou/PCBS_Emotional_Memory/blob/main/Figures/GG2017.PNG)
+![GG2017](https://user-images.githubusercontent.com/54603452/118040270-a1abcf80-b371-11eb-8938-2af32d1382b4.PNG)
+
 
 1. It loads spike data and metadata (using the bk.load module).
 2. Separates neurons into neuron types.
