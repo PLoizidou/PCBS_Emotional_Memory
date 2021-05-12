@@ -125,7 +125,8 @@ def plot_scatter(sessions, states, brain_region):
     plt.ylabel(f'{states[1]} rate (Hz)')
     plt.title(str(title))
     plt.legend(['Identity line','Other', 'Pyramidal', 'Interneurons'])
-    return plt.show()
+    plt.show()
+    return;
 
 
 
@@ -158,7 +159,8 @@ def plot_histogram(data, title, bin_size=50, upper_axis_bound=100, lower_axis_bo
     plt.title(str(title))
     plt.ylabel('Number of cells')
     plt.legend()
-    return plt.show()
+    plt.show()
+    return;
 
 
 
@@ -184,4 +186,5 @@ def plot_both_histograms(sessions, states, brain_region,bin_size=50, upper_axis_
     title1 = 'Firing rate distribution at ' + brain_region + ' during ' + states[1]
     histogram_region_1=plot_histogram(state0, title0)
     histogram_region_2=plot_histogram(state1, title1)
+    return; 
 
