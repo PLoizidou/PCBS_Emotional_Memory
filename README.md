@@ -29,6 +29,10 @@ All the data were saved locally. Each session corresponded to a different local 
 - Dorsal Hippocampus: 'Hpc'
 
 ## What the analysis does
+
+The goal of this analysis was to result in the graphs shown below and allow the user to do any comparison of interest between brain states.
+{!!}
+
 1. It loads spike data and metadata (using the bk.load module).
 2. Separates neurons into neuron types.
 3. Computes the firing rates for each of the neuron types for two specified states.
