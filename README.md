@@ -77,4 +77,4 @@ Dorsal Hippocampus: 'Hpc'
 - While I loved some exercises (the one with the tree drawing was by far my favourite), I missed classes on libraries like NumPy, pandas, and Matplotlib which I feel are very useful for cognitive sciences.  
 
 
-[1] Girardeau, G., Inema, I., & Buzsáki, G. (2017). Reactivations of emotional memory in the hippocampus–amygdala system during sleep. Nature neuroscience, 20(11), 1634.
+[[1] Girardeau, G., Inema, I., & Buzsáki, G. (2017). Reactivations of emotional memory in the hippocampus–amygdala system during sleep. Nature neuroscience, 20(11), 1634.](http://girardeaulab.org/wp-content/uploads/2018/08/Girardeau2017.pdf)
