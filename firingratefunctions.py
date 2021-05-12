@@ -83,8 +83,9 @@ def double_flatten(array):
 def plot_scatter(sessions, states, brain_region):
     state0,state1=calculate_firing_rates_multiple_sessions(sessions, states, brain_region)
     identity=np.linspace(-10,100,101) 
+    plt.figure()
     plt.plot(identity,identity, 'k-', color='b')
-    title=brain_region+' : '+states[0]+ ' vs '+ states[1]
+    title='Firing rates at '+brain_region+' : '+states[0]+ ' vs '+ states[1]
     for i in range(len(state0)):
         plt.scatter(state0[i][2],state1[i][2], color='gray',alpha=0.5)
         plt.scatter(state0[i][0],state1[i][0], color='r', alpha=0.5)
@@ -105,6 +106,7 @@ def plot_histogram(data, title, bin_size=50, upper_axis_bound=100, lower_axis_bo
     inter=double_flatten(inter)
     other=double_flatten(other)
     logbins = np.logspace(np.log10(lower_axis_bound),np.log10(upper_axis_bound),bin_size)
+    plt.figure()
     plt.hist(other, logbins, color='gray', label='Other')
     plt.xscale('log')
     plt.hist(pyr, logbins, color='r', label='Pyramidal')
@@ -112,6 +114,7 @@ def plot_histogram(data, title, bin_size=50, upper_axis_bound=100, lower_axis_bo
     plt.hist(inter, logbins, color='b', label='Interneurons')
     plt.xscale('log')
     plt.title(str(title))
+    plt.ylabel('Number of cells')
     plt.legend()
     plt.show()
 
@@ -119,6 +122,8 @@ def plot_histogram(data, title, bin_size=50, upper_axis_bound=100, lower_axis_bo
 
 def plot_both_histograms(sessions, states, brain_region,bin_size=50, upper_axis_bound=100, lower_axis_bound=0.1):
     state0,state1=calculate_firing_rates_multiple_sessions(sessions, states, brain_region)
-    histogram_region_1=plot_histogram(state0, title=brain_region+ states[0])
-    histogram_region_2=plot_histogram(state1, title=brain_region+ states[1])
+    title0 = 'Firing rate distribution at ' + brain_region + ' during ' + states[0]
+    title1 = 'Firing rate distribution at ' + brain_region + ' during ' + states[1]
+    histogram_region_1=plot_histogram(state0, title0)
+    histogram_region_2=plot_histogram(state1, title1)
 
