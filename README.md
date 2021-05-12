@@ -28,6 +28,7 @@ The file as it is right now is not particularly useful for other users, but prov
 
 ### Notation:
 **Brain states:**
+
 REM sleep:'Rem'
 
 NREM sleep: 'sws' (standing for slow wave sleep)
@@ -37,6 +38,7 @@ Wake periods: 'Wake'
 Periods of drowsiness (falling asleep): 'drowsy'
 
 **Brain types:**
+
 Pyramidal cells: 'Pyr'
 
 Interneurons:'Int'
@@ -44,6 +46,7 @@ Interneurons:'Int'
 Unknown cells: 'Unk'
 
 **Brain regions:**
+
 Basolateral Ammygdala: 'BLA'
 
 Dorsal Hippocampus: 'Hpc'
