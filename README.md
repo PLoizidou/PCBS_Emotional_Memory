@@ -2,11 +2,6 @@
 
 The hippocampus and the basolateral amygdala are the two brain regions thought to be important in the formation and consolidation of this type of memory. Giradeau et al, 2017 [1] recorded neural ensembles in these two regions while four rats learned the location of an aversive air puff on a linear track, as well as during sleep before and after training. The dynamics of this brain regions and how they might contribute to memory consolidation are currently unknown. One first step to understand this mechanism, and the main goal of this project,  is to analyze how the the firing rate of cells in each region vary across different brain states: wake, drowsy, rapid eye movement (REM) sleep and non-rapid eye movement (NREM) sleep. In doing so, it is relevant to separate the cells based on their physiology. Three main categories of cells were identified in the dataset (after spike sorting and connectivity analysis): pyramidal neurons, interneurons, and unknown cells (not clearly belonging to either of the other two categories).
 
-
-## Plan
-This is a project aiming to replicate the analysis and graphs shown in Girardeau et al. 2017 (https://www.nature.com/articles/nn.4637.pdf?origin=ppub). Due to limited computational power and memory the analysis will only be done on one session of one rat. Moreover analysis will be limited to neural data (not behavioral).  All the analysis and illustrations will be performed in Python. The main Python modules to be used are numpy, pandas, matplotlib, and neuroseries (https://github.com/NeuroNetMem/neuroseries). 
-
-
 ## Dataset
 The data are publicly available and were acquired from: https://crcns.org/data-sets/hc/hc-14
 More details about the data can be found here: https://crcns.org/data-sets/hc/hc-14/about-hc-14
