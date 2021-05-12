@@ -1,5 +1,6 @@
 # Emotional Memory Project: How do the firing rates of pyramidal and interneurons vary across different brain states?
 
+## Rationale
 The hippocampus and the basolateral amygdala are the two brain regions thought to be important in the formation and consolidation of this type of memory. Girardeau et al, 2017 [1] recorded neural ensembles in these two regions while four rats learned the location of an aversive air puff on a linear track, as well as during sleep before and after training. The dynamics of these brain regions and how they might contribute to memory consolidation are currently unknown. One first step to understand this mechanism, and the main goal of this project,  is to analyze how the firing rate of cells in each region varies across different brain states: wake, drowsy, rapid-eye-movement (REM) sleep, and non-rapid eye movement (NREM) sleep. In doing so, it is relevant to separate the cells based on their physiology. Three main categories of cells were identified in the dataset (after spike sorting and connectivity analysis): pyramidal neurons, interneurons, and unknown/other cells (not clearly belonging to either of the other two categories).
 
 ![RatBrain-Interactions](https://user-images.githubusercontent.com/54603452/118034569-69ed5980-b36a-11eb-8cea-de84dbf16b00.png)
