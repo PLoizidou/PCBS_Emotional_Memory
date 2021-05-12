@@ -32,7 +32,7 @@ All the data were saved locally. Each session corresponded to a different local 
 
 The goal of this analysis was to result in the graphs shown below and allow the user to do any comparison of interest between brain states.
 
-![alt text](https://github.com/PLoizidou/PCBS_Emotional_Memory/blob/main/Figures/GG2017.PNG)
+![GG2017](https://user-images.githubusercontent.com/54603452/118024159-a5822680-b35e-11eb-98c3-c6f46db379ce.PNG) 
 
 1. It loads spike data and metadata (using the bk.load module).
 2. Separates neurons into neuron types.
@@ -41,7 +41,11 @@ The goal of this analysis was to result in the graphs shown below and allow the 
 5. Plots a histogram showing the distribution of firing rates for different types of cells during the selected brain states.
  
 ## How to run the analysis
-The analysis can be run easily by choosing (a) the sessions the user wants to include, (b) the two brain states that the user wishes to compare, and (c) the brain structure of interest. 
+The analysis can be run easily by choosing the following parameters:
+(a) the sessions the user wants to include, 
+(b) the two brain states that the user wishes to compare, and 
+(c) the brain structure of interest. 
+
 Running the following script will result in the same comparisons shown in Figure 3C of Girardeau et al, 2017 [1](http://girardeaulab.org/wp-content/uploads/2018/08/Girardeau2017.pdf)
 
 ## Results obtained
@@ -61,7 +65,7 @@ Running the following script will result in the same comparisons shown in Figure
 - I am going to use spike data for my internship this summer, so, this project was a good introduction to the nature of binary data and how to use them. 
 - I usually write very ugly code, with lots of repeats, which I can only use once because I don't remeber what's going on the next day. This project forced me to write functions and make them short and understandable(hopefully).
 - Git and Github Desktop! I had no idea how much I needed this.
-- Regular expressions and clean code are very useful. ![GG2017](https://user-images.githubusercontent.com/54603452/118024159-a5822680-b35e-11eb-98c3-c6f46db379ce.PNG)
+- Regular expressions and clean code are very useful. 
 
 - I think the biggest contribution of this course to my skills was to make programming appear a bit more fun and a bit less scary. 
 

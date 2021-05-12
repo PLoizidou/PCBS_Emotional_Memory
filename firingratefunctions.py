@@ -84,6 +84,7 @@ def plot_scatter(sessions, states, brain_region):
     state0,state1=calculate_firing_rates_multiple_sessions(sessions, states, brain_region)
     identity=np.linspace(-10,100,101) 
     plt.plot(identity,identity, 'k-', color='b')
+    title=brain_region+' : '+states[0]+ ' vs '+ states[1]
     for i in range(len(state0)):
         plt.scatter(state0[i][2],state1[i][2], color='gray',alpha=0.5)
         plt.scatter(state0[i][0],state1[i][0], color='r', alpha=0.5)
@@ -92,6 +93,7 @@ def plot_scatter(sessions, states, brain_region):
     plt.xscale('log')
     plt.xlabel(f'{states[0]} rate (Hz)')
     plt.ylabel(f'{states[1]} rate (Hz)')
+    plt.title(str(title))
     plt.legend(['Identity line','Other', 'Pyramidal', 'Interneurons'])
     plt.show()
 
