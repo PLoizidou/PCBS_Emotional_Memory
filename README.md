@@ -46,6 +46,7 @@ The goal of this analysis was to result in the graphs shown below and allow the 
 ## How to run the analysis
 The analysis can be run easily by choosing (a) the sessions the user wants to include, (b) the two brain states that the user wishes to compare, and (c) the brain structure of interest. 
 Running [this code](https://github.com/PLoizidou/PCBS_Emotional_Memory/blob/main/Emotional%20Memory%20Firing%20Rates%20%40%20BLA%20and%20Hpc.py) will result in the same comparisons shown in Figure 3C of Girardeau et al, 2017 [[1]](http://girardeaulab.org/wp-content/uploads/2018/08/Girardeau2017.pdf)
+
 All the functions used can be found [here](https://github.com/PLoizidou/PCBS_Emotional_Memory/blob/main/firingratefunctions.py).
 
 ## Results obtained
