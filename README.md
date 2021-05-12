@@ -31,7 +31,8 @@ All the data were saved locally. Each session corresponded to a different local 
 ## What the analysis does
 
 The goal of this analysis was to result in the graphs shown below and allow the user to do any comparison of interest between brain states.
-{!!}
+
+![alt text](https://github.com/PLoizidou/PCBS_Emotional_Memory/blob/main/Figures/GG2017.PNG)
 
 1. It loads spike data and metadata (using the bk.load module).
 2. Separates neurons into neuron types.
@@ -60,7 +61,8 @@ Running the following script will result in the same comparisons shown in Figure
 - I am going to use spike data for my internship this summer, so, this project was a good introduction to the nature of binary data and how to use them. 
 - I usually write very ugly code, with lots of repeats, which I can only use once because I don't remeber what's going on the next day. This project forced me to write functions and make them short and understandable(hopefully).
 - Git and Github Desktop! I had no idea how much I needed this.
-- Regular expressions and clean code are very useful. 
+- Regular expressions and clean code are very useful. ![GG2017](https://user-images.githubusercontent.com/54603452/118024159-a5822680-b35e-11eb-98c3-c6f46db379ce.PNG)
+
 - I think the biggest contribution of this course to my skills was to make programming appear a bit more fun and a bit less scary. 
 
 ## What did I miss in this course?
