@@ -30,7 +30,7 @@ def get_firing_rate_for_specific_state(neurons, state):
             spk_time = neurons[i].restrict(state_used).as_units('ms').index.values
             mean_firing_rates[i] = len(spk_time)/state_used.tot_length('s')
         except Exception:
-            pass #using this exeption because not all neurons have spikes in all states. The nan values cannot be used to calculate firing rates.
+            pass #using this exeption because not all neurons have spikes in all states (represented by NaN values). The NaN values cannot be used to calculate firing rates.
     return mean_firing_rates
 
 
@@ -55,7 +55,7 @@ def get_FR_per_state_neurontype(path, states, brain_region):
 
 def get_firing_rates_all_sessions(paths, states, brain_region):
     '''
-    Returns N lists (one for each state) with the mean firing rate of each of the types of neurons (Pyramidal, interneurons, unknown) during the chosen state
+    Returns N numpy arrays (one for each state) with the mean firing rate of each of the types of neurons (Pyramidal, interneurons, unknown) during the chosen state
     where N is the number of sessions.
     Returned lists structure = Number of sessions * number of types of cells(=3) * number of cells(depends on session)
     
@@ -92,7 +92,7 @@ def plot_scatter(paths, states, brain_region):
     plt.xscale('log')
     plt.xlabel(f'{states[0]} rate (Hz)')
     plt.ylabel(f'{states[1]} rate (Hz)')
-    plt.legend(['Identity','Other', 'Pyramidal', 'Interneurons'])
+    plt.legend(['Identity line','Other', 'Pyramidal', 'Interneurons'])
     plt.show()
 
 
