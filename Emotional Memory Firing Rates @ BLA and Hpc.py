@@ -4,21 +4,13 @@
 import firingratefunctions as fr
 import pickle
 
-
 with open('sessions.pkl', 'rb') as f:
     session_paths = pickle.load(f)
 
-
 fr.plot_scatter(session_paths, ['wake','sws'], 'Hpc')
-
-
 
 fr.plot_scatter(session_paths, ['wake','Rem'], 'Hpc')
 
-
 fr.plot_both_histograms(session_paths, ['wake','sws'], 'Hpc',bin_size=50, upper_axis_bound=100, lower_axis_bound=0.1)
 
-
-
 fr.plot_both_histograms(session_paths, ['wake','Rem'], 'Hpc',bin_size=50, upper_axis_bound=100, lower_axis_bound=0.1)
-
