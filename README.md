@@ -6,13 +6,6 @@ The hippocampus and the basolateral amygdala are the two brain regions thought t
 ## Plan
 This is a project aiming to replicate the analysis and graphs shown in Girardeau et al. 2017 (https://www.nature.com/articles/nn.4637.pdf?origin=ppub). Due to limited computational power and memory the analysis will only be done on one session of one rat. Moreover analysis will be limited to neural data (not behavioral).  All the analysis and illustrations will be performed in Python. The main Python modules to be used are numpy, pandas, matplotlib, and neuroseries (https://github.com/NeuroNetMem/neuroseries). 
 
-**There are 3 main steps to complete:**
-
-2. Set up the loading of the data into the workspace and turn them into data that can be read by python. 
-3. Replicate Figure 2C: plot the firing rates of the first type of cells against the second. To do so I need to 
-      - compute the firing rates for each cell for each of the periods: REM and NREM
-      - compute firing rate distribution for each type of cell during each state.
-
 
 ## Dataset
 The data are publicly available and were acquired from: https://crcns.org/data-sets/hc/hc-14
@@ -57,7 +50,6 @@ Dorsal Hippocampus: 'Hpc'
 3. Computes the firing rates for each of the neuron types for specified states.
 4. Plots a scatter plot showing how the firing rates of cells during a period relate to the firing rates of another period.
 5. Plots a histogram showing the distribution of firing rates for different types of cells during the selected brain states.
-
  
 ## How to run the analysis
 
