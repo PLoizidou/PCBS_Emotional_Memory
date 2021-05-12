@@ -4,6 +4,14 @@ import matplotlib.pyplot as plt
 import bk.load
 
 def categorize_types_regions(session, brain_region):
+    ''' 
+    Categorizes neurons of session according to their physiology and location.
+    Keyword arguments:
+    session -- string, path to the directory where the useful files are saved.
+    brain_region -- string, brain region of interest. Can be 'BLA' or 'Hpc'
+    Outpts:
+    3 numpy ndarrays, each corresponding to a different kind of cell.
+     '''
     bk.load.current_session(session)
     neurons, metadata = bk.load.loadSpikeData(session)
     pyramidal = neurons[(metadata['Type']=='Pyr') & (metadata['Region']==brain_region)]
@@ -16,9 +24,12 @@ def calculate_firing_rate_per_state(neurons, state):
     Returns a pandas Series with the mean firing rate of each of the neurons during a chosen state (REM, sws, drowsy, or wake)
     
     Keyword arguments:
-    neurons -- numpy.ndarray containing series data of selected neurons 
+    neurons -- numpy.ndarray, containing series data of selected neurons 
     state -- string, should be one of the following: Rem, sws, drowsy, wake (default='REM')
     
+    Outputs:
+    A pd.Series object containing the mean firing rates of all neurons during a given state.
+
     Restrictions:
     Can only be called when the neurons and session have already been loaded.
     """
@@ -39,7 +50,7 @@ def calculate_firing_rate_per_state_per_type(session, states, brain_region):
     Returns 2 lists (one for each state) with the mean firing rate of each of the types of neurons (Pyramidal, interneurons, unknown) during the chosen state.
     
     Keyword arguments:
-    session -- string containing the dircetory where the data files are stored
+    session -- string, containing the dircetory where the data files are stored
     states -- list of 2 strings, should be one of the following: REM, sws, drowsy, wake (default='REM')
     '''
     neurons_by_type=categorize_types_regions(session, brain_region)
@@ -60,7 +71,7 @@ def calculate_firing_rates_multiple_sessions(sessions, states, brain_region):
     Returned lists structure = Number of sessions * number of types of cells(=3) * number of cells(depends on session)
     
     Keyword arguments:
-    sessions -- list of strings containing the dircetories where the data files for each sessions are stored
+    sessions -- list of strings, containing the dircetories where the data files for each sessions are stored
     states -- list of 2 strings, should be one of the following: REM, sws, drowsy, wake (default='REM')
     '''
     
@@ -75,12 +86,30 @@ def calculate_firing_rates_multiple_sessions(sessions, states, brain_region):
 
 
 def double_flatten(array):
+    '''Returns a flat array of arrays
+    
+    Keyword arguments:
+    array -- np.array of arrays, with two levels of depth
+    
+    Ouput:
+    np.array two times more flat
+    '''
     flat_1=np.concatenate(array).ravel()
     flat_2=np.concatenate(flat_1).ravel()
     return flat_2
 
 
 def plot_scatter(sessions, states, brain_region):
+    '''Plots a scatter plot
+    
+    Keyword arguments:
+    sessions -- list os strings, containting the directory paths to all the sessions of interest
+    states -- list of two strings, containing the states of interest
+    brain_region -- string, brain regions of interest
+    
+    Ouput:
+    Scatter plot where the state listed first appears in the x axis and the state listed second appears on the y axis
+    '''
     state0,state1=calculate_firing_rates_multiple_sessions(sessions, states, brain_region)
     identity=np.linspace(-10,100,101) 
     plt.figure()
@@ -96,11 +125,24 @@ def plot_scatter(sessions, states, brain_region):
     plt.ylabel(f'{states[1]} rate (Hz)')
     plt.title(str(title))
     plt.legend(['Identity line','Other', 'Pyramidal', 'Interneurons'])
-    plt.show()
+    return plt.show()
 
 
 
 def plot_histogram(data, title, bin_size=50, upper_axis_bound=100, lower_axis_bound=0.1):
+    '''
+    Plots a histogram
+    
+    Keyword arguments:
+    data -- variable containing the data to be plotted
+    title -- string specifying the table of the graph
+    bin_size -- integer, size of bins to be used (Default=50)
+    upper_axis_bound -- integer, upper boundary of the two axes, optional (Default=100)
+    lower_axis_bound -- integer, lower boundary of the two axes, optional (Default=0)
+    
+    Ouput:
+    Scatter plot where the state listed first appears in the x axis and the state listed second appears on the y axis
+    '''
     other,inter,pyr=np.hsplit(data,3)
     pyr=double_flatten(pyr)
     inter=double_flatten(inter)
@@ -116,11 +158,27 @@ def plot_histogram(data, title, bin_size=50, upper_axis_bound=100, lower_axis_bo
     plt.title(str(title))
     plt.ylabel('Number of cells')
     plt.legend()
-    plt.show()
+    return plt.show()
 
 
 
 def plot_both_histograms(sessions, states, brain_region,bin_size=50, upper_axis_bound=100, lower_axis_bound=0.1):
+    '''
+    Plots two histogram,one for each brain state, showing the distribution of firing rates. 
+    
+    Keyword arguments:
+    sessions -- list os strings, containting the directory paths to all the sessions of interest
+    states -- list of two strings, containing the states of interest
+    brain_region -- string, brain regions of interest
+    data -- variable containing the data to be plotted
+    title -- string, specifying the title of the graph
+    bin_size -- integer, size of bins to be used (Default=50)
+    upper_axis_bound -- integer, upper boundary of the two axes (Default=100)
+    lower_axis_bound -- integer, lower boundary of the two axes (Default=0)
+    
+    Ouput:
+    Scatter plot where the state listed first appears in the x axis and the state listed second appears on the y axis
+    '''
     state0,state1=calculate_firing_rates_multiple_sessions(sessions, states, brain_region)
     title0 = 'Firing rate distribution at ' + brain_region + ' during ' + states[0]
     title1 = 'Firing rate distribution at ' + brain_region + ' during ' + states[1]
