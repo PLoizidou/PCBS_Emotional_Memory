@@ -27,20 +27,26 @@ All the data were saved locally. Each session corresponded to a different local 
 The file as it is right now is not particularly useful for other users, but provides an example of how local paths can incorporated in the analysis.
 
 ### Notation:
-Brain states:
-REM sleep:'sws' (standing for slow wave sleep)
-NREM sleep: 'Nrem'
+**Brain states:**
+REM sleep:'Rem'
+
+NREM sleep: 'sws' (standing for slow wave sleep)
+
 Wake periods: 'Wake'
+
 Periods of drowsiness (falling asleep): 'drowsy'
 
-Brain types:
+**Brain types:**
 Pyramidal cells: 'Pyr'
+
 Interneurons:'Int'
+
 Unknown cells: 'Unk'
 
-Brain regions:
+**Brain regions:**
 Basolateral Ammygdala: 'BLA'
-Hippocampus: 'Hpc'
+
+Dorsal Hippocampus: 'Hpc'
 
 ## What the analysis does
 1. It loads spike data and metadata (using the bk.load module).
