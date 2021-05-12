@@ -45,6 +45,52 @@ The analysis can be run easily by choosing (a) the sessions the user wants to in
 Running the following script will result in the same comparisons shown in Figure 3C of Girardeau et al, 2017 [1](http://girardeaulab.org/wp-content/uploads/2018/08/Girardeau2017.pdf)
 
 ## Results obtained
+### Wake vs NREM @BLA
+**Scatter Plot:**
+
+![wake_sws](https://user-images.githubusercontent.com/54603452/118032871-6d7fe100-b368-11eb-9774-7d33cd22dc25.png)
+
+**Histograms:**
+
+![BLA wake](https://user-images.githubusercontent.com/54603452/118034219-0531ff00-b36a-11eb-87d0-c927612a7519.png)
+
+![BLA NREM](https://user-images.githubusercontent.com/54603452/118034226-095e1c80-b36a-11eb-867d-0cefdb34e3ee.png)
+
+### Wake vs REM @BLA
+**Scatter Plot:**
+
+![wake_rem](https://user-images.githubusercontent.com/54603452/118034298-1f6bdd00-b36a-11eb-8c6b-2e6a623db7c1.png)
+
+**Histograms:**
+
+![BLA wake](https://user-images.githubusercontent.com/54603452/118034324-25fa5480-b36a-11eb-92fb-9a52fd487670.png)
+
+![BLA REM](https://user-images.githubusercontent.com/54603452/118034342-28f54500-b36a-11eb-8dbf-78e3146114ba.png)
+
+**The same analysis was ran on the dorsal hippocampus:**
+### Wake vs REM @Hpc
+**Scatter Plot:**
+
+![wake_rem_Hpc](https://user-images.githubusercontent.com/54603452/118035539-9a81c300-b36b-11eb-94fc-c3145d4871ea.png)
+
+**Histograms:**
+
+![Hpc wake](https://user-images.githubusercontent.com/54603452/118035776-f8aea600-b36b-11eb-94e3-c92e902821da.png)
+
+![Hpc REM](https://user-images.githubusercontent.com/54603452/118035782-f9dfd300-b36b-11eb-978d-2ff77d46f980.png)
+
+### Wake vs NREM @Hpc
+**Scatter Plot:**
+
+![wake_Nrem_Hpc](https://user-images.githubusercontent.com/54603452/118035844-0f54fd00-b36c-11eb-926a-d669dca4b5b0.png)
+
+
+**Histograms:**
+
+![Hpc wake](https://user-images.githubusercontent.com/54603452/118035857-154ade00-b36c-11eb-9a0a-568fe8d34a09.png)
+
+![Hpc NREM](https://user-images.githubusercontent.com/54603452/118035866-18de6500-b36c-11eb-8bbb-0bb9ecee2431.png)
+
 
 ## To do
 - An obvious limitation of this project is the inability of the user to run the script without needing to download a heavy dataset. So, the next step is to use datalad, get the data from crcn.org, and allow other users to run the code easily. 
@@ -61,8 +107,7 @@ Running the following script will result in the same comparisons shown in Figure
 - I am going to use spike data for my internship this summer, so, this project was a good introduction to the nature of binary data and how to use them. 
 - I usually write very ugly code, with lots of repeats, which I can only use once because I don't remeber what's going on the next day. This project forced me to write functions and make them short and understandable(hopefully).
 - Git and Github Desktop! I had no idea how much I needed this.
-- Regular expressions and clean code are very useful. ![GG2017](https://user-images.githubusercontent.com/54603452/118024159-a5822680-b35e-11eb-98c3-c6f46db379ce.PNG)
-
+- Regular expressions and clean code are very useful. !
 - I think the biggest contribution of this course to my skills was to make programming appear a bit more fun and a bit less scary. 
 
 ## What did I miss in this course?
