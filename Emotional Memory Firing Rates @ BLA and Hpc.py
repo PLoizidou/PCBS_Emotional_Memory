@@ -1,10 +1,12 @@
 
-""" This is file that can be run to obtain different comparisons across brain states for three different kinds of neurons. The user can choose the sessions of interest (sessions are represented by local directories with the files associated with each session), two brain states among 'sws', 'wake','Rem', and 'drowsy', and finally a brain structure among 'Hpc' and 'BLA'"""
+''' This is file that can be run to obtain different comparisons across brain states for three different kinds of neurons. 
+The user can choose the sessions of interest (sessions are represented by local directories with the files associated with each session), 
+two brain states among 'sws', 'wake','Rem', and 'drowsy', and finally a brain structure among 'Hpc' and 'BLA'''
 
 import firingratefunctions as fr
 import pickle
 
-with open('sessions.pkl', 'rb') as f:
+with open('\sessions.pkl', 'rb') as f:
     session_paths = pickle.load(f)
 
 fr.plot_scatter(session_paths, ['wake','sws'], 'Hpc')
